@@ -1,0 +1,100 @@
+<!--prompts:
+identify the bug
+refactor this into a reusabale component--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reusable Pricing Component</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    /* === Pricing Card Component === */
+    .pricing-card {
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 0 10px #ccc;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .pricing-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .pricing-price {
+      font-size: 18px;
+      color: green;
+      margin-bottom: 12px;
+    }
+
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .pricing-features li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pricing-btn {
+      width: 100%;
+      padding: 10px;
+      background: blue;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .pricing-btn:hover {
+      background: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Reusable Component -->
+  <div class="pricing-card">
+    <h2 class="pricing-title">Basic Plan</h2>
+    <p class="pricing-price">$9.99 / month</p>
+
+    <ul class="pricing-features">
+      <li>1 GB Storage</li>
+      <li>Basic Support</li>
+      <li>All Core Features</li>
+    </ul>
+
+    <button class="pricing-btn">Start Trial</button>
+  </div>
+
+  <!-- Same component reused -->
+  <div class="pricing-card">
+    <h2 class="pricing-title">Pro Plan</h2>
+    <p class="pricing-price">$19.99 / month</p>
+
+    <ul class="pricing-features">
+      <li>10 GB Storage</li>
+      <li>Priority Support</li>
+      <li>Advanced Features</li>
+    </ul>
+
+    <button class="pricing-btn">Get Started</button>
+  </div>
+
+</body>
+</html>
